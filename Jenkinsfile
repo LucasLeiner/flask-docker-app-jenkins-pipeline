@@ -5,6 +5,10 @@ pipeline {
         CONTAINER_NAME = "flask-container"
         STUB_VALUE = "200"
     }
+    tools{
+        dockerTool 'docker'
+    }
+    
     stages {
         stage('Stubs-Replacement'){
             steps {
